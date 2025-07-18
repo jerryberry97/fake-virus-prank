@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EPIC GLITCH VIRUS</title>
+  <style>
+    body {
+      background: black;
+      color: lime;
+      font-family: monospace;
+      overflow: hidden;
+    }
+    .glitch {
+      font-size: 3em;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px lime;
+      animation: glitchAnim 1s infinite;
+    }
+    @keyframes glitchAnim {
+      0% { transform: translate(-50%, -50%) skew(0deg, 0deg); }
+      25% { transform: translate(-50.5%, -49.5%) skew(2deg, -2deg); }
+      50% { transform: translate(-49.5%, -50.5%) skew(-2deg, 2deg); }
+      75% { transform: translate(-50.3%, -50.2%) skew(1deg, -1deg); }
+      100% { transform: translate(-50%, -50%) skew(0deg, 0deg); }
+    }
+    .scanlines {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 0, 0.05) 3px
+      );
+      pointer-events: none;
+    }
+    .flicker {
+      animation: flickerAnim 0.15s infinite;
+    }
+    @keyframes flickerAnim {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glitch flicker">SYSTEM INFECTED</div>
+  <div class="scanlines"></div>
+
+  <script>
+    setInterval(() => {
+      const glitchText = document.querySelector('.glitch');
+      const chars = '█▓▒░@#?!&%$';
+      const originalText = 'SYSTEM INFECTED';
+      let display = '';
+      for (let i = 0; i < originalText.length; i++) {
+        display += Math.random() > 0.8 ? chars[Math.floor(Math.random() * chars.length)] : originalText[i];
+      }
+      glitchText.textContent = display;
+    }, 100);
+  </script>
+</body>
+</html>
