@@ -15,7 +15,7 @@
 
 3. **Run the Prank**  
    - Open the extracted folder  
-   - Double-click the file named: **`RUN_ALL.bat`** or **`run_all.exe`** (depending on what you created)  
+   - Double-click the file named: **`RUN_ALL.bat`** 
    - Enjoy the chaos 
 
 ---
