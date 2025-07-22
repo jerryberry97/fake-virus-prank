@@ -1,0 +1,13 @@
+======== FAKE VIRUS PRANK ========
+
+ Harmless prank tool. Just for fun!
+
+--- HOW TO RUN ---
+1. Open the folder.
+2. Run: RUN_ALL.bat
+
+Enjoy the chaos 
+
+--- DISCLAIMER ---
+For entertainment only. Use responsibly.
+Creator is not responsible for misuse.
